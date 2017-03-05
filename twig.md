@@ -7,6 +7,12 @@
 ````
 better instead ``getModVar('RKShowRoomModule', 'property01')`` you use a default value ``getModVar('RKShowRoomModule', 'property01' default value)``. With the default value you are on the safe side if the variable do not exist or is empty.
 
+## Variables for field length
+inside the corresponding edit.html.twig you may want to add the maxlength. e.g.
+````
+{{ form_row(form.descriptionTeaser, { 'attr': { 'maxlength': getModVar('RKShowRoomModule', 'storyTeaserDescriptionLength') }}) }}
+````
+
 # check for permissions
 ````
 	{% if hasPermission('RKShowRoomModule:ShowRoomItem:', '::', 'ACCESS_EDIT') %}
