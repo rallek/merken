@@ -50,4 +50,7 @@ In the ``base.html.twig`` you have to add this as well:
 
 ### Templating
 
+In templates it is now very simple. You have to add to your raster divs the ``class="box-item"`` and to the divs you want to have the same hight ``class="white-space"``. white-space is in my case something I configured some background css for my site. You can use other classes as well. In the stackoverflow example they used the bootstratp well instead.
+
+Thats it!
 
