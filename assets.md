@@ -1,3 +1,5 @@
+An example how I implemented a new asset for my module
+
 # We want to have the same hight for every div in a row in our layout
 This instruction is just for me and for Zikula usage. The module should be made with modulestudio
 
