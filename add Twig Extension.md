@@ -71,3 +71,14 @@ class CustomTwigExtension extends Twig_Extension
     }
 }
 ````
+# Using in a template
+To print the title of the root element you have to run this code:
+````
+{% set storyShowRoomItem = rkshowroommodule_getShowRoomItemForStory(story) %}
+{% if storyShowRoomItem is not empty %}
+    <p>{{ storyShowRoomItem.title }}</p>
+{% endif %}
+````
+
+# more Twig Extensions?
+you can add more Twig Extensions into CustomTwigExtension.php. This way to implement avoids to touch generated code.
