@@ -40,3 +40,8 @@ use ``|striptags`` instead of ``|safeHtml`` to ensure you are not cutting html i
 {% set templateTitle = showRoomItem.title ~ ' ' ~ showRoomItem.property01 ~ ' ' ~ showRoomItem.property02 %}
 ````
 in this example I create a new template title. The strings are combined via `` ~ ``
+
+# Block in block
+Du kannst Blöcke in anderen Blöcken aufrufen:
+``{{ block('meinblock') }}``
+Dabei werden die bestehenden Variablen übergeben.
