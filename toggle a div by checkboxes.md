@@ -8,3 +8,6 @@ https://github.com/Bttstrp/bootstrap-switch
 
 another solution I found:
 http://stackoverflow.com/questions/15697823/jquery-toggle-input-when-checkbox-is-checked / http://jsfiddle.net/aaTq3/
+
+And this one seems the right one :-) :
+http://codepen.io/ibanez182/pen/WxKABq
