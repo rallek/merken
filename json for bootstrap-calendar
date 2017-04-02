@@ -1,0 +1,21 @@
+how a json file can look like if you want toi use bootstrap-calendar:
+
+````
+{
+    "success": 1,
+    "result": [
+        {% for notice in items %}
+            {
+                "id": {{ notice.id }},
+                "title": "{{ notice.title|replace({ '"': '' }) }}",
+                "url": "{{ url('rkbulletinmodule_notice_display', { 'id': notice.id }) }}",
+                "class": "{% if notice.categories|length > 0 %}{{ notice.categories[0].category.display_name[app.request.locale]|default(notice.categories[0].category.name)|replace({ '"': '' }) }}{% endif %}",
+                "start": {{ notice.eventStartDateTime.getTimestamp()*1000}},
+                "end": {{ notice.eventEndDateTime.getTimestamp()*1000}}
+            }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+````
+
+Important is to make the getTimeStamp miliseconds
