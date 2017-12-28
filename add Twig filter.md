@@ -18,6 +18,29 @@ class TwigExtension extends AbstractTwigExtension
 Here we can add our filter.
 
 ````
+     public function getFilters()
+     {
+         $filters = parent::getFilters();
+
+         $filters[] = new
+\Twig_SimpleFilter('rkeventphotosmodule_myFilter', [$this, 'myFilter'], ['is_safe' => ['html']]);
+
+         return $filters;
+     }
+````
+plus
+````
+     public function myFilter($string)
+     {
+         // manipulate $string
+
+         return $string;
+     }
+````
+
+This is an example
+
+````
 namespace RK\EventPhotosModule\Twig;
 
 use RK\EventPhotosModule\Twig\Base\AbstractTwigExtension;
@@ -51,5 +74,10 @@ public function htmlentitiesFilter($string)
 With the first function you extend the function in ``Twig/base/AbstractTwigExtension.php``.
 
 In the second function you are doing your filtering.
+
+The usage in a temaplate is like this:
+````
+{{myString|rkeventphotosmodule_htmlentitiesFilter }}
+````
 
 
