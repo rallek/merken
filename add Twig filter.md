@@ -1,4 +1,4 @@
-There was a need to use the php function http://php.net/manual/de/function.htmlentities.php in a template. This is simple to add:
+There was a need to use the php function http://php.net/manual/de/function.htmlentities.php in a template. This is sample how to add. Other php manipulations are similar.
 
 open your file ``Twig/TwigExtension.php``. It looks like:
 ````
